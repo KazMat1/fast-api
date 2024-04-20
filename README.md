@@ -18,7 +18,7 @@ docker-compose run \
 # through a make command
 make poerty-init
 ```
-## Install packages based on it
+## Install packages for a initialization
 ```shell
 # through a docker compose command
 docker-compose run --entrypoint "poetry install --no-root" demo-app
@@ -27,6 +27,27 @@ docker-compose run --entrypoint "poetry install --no-root" demo-app
 # through a make command
 make poerty-install
 ```
+
+## Install packages for a development
+```shell
+# for dev-dependency
+make poetry-add-dev {PACKAGE1} {PACKAGE2} ...
+# for dependency
+make poetry-add {PACKAGE1} {PACKAGE2} ...
+```
+
+## Migration for database
+```shell
+make migrate
+```
+
+## Test
+```shell
+make test
+```
+
+##
+
 
 ## trouble shooting
 ### import error of module path with vscode
