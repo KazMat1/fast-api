@@ -15,10 +15,10 @@ poetry-init:
 		--dependency uvicorn[standard]" \
 	demo-app
 poetry-install:
-	docker-compose run --entrypoint "poetry install --no-root" demo-app
-poetry-change:
-	@build-no-cache
-init:
+	docker compose run --entrypoint "poetry install --no-root" demo-app
+poetry-add:
+	docker compose exec demo-app poetry add $(wordlist 2, $(words $(MAKECMDGOALS) - 2), $(MAKECMDGOALS))
+project-init:
 	@build
 	@poetry-init
 	@poetry-install
