@@ -31,6 +31,8 @@ poetry-install:
 	docker compose run --entrypoint "poetry install --no-root" demo-app
 poetry-add:
 	docker compose exec demo-app poetry add $(wordlist 2, $(words $(MAKECMDGOALS) - 2), $(MAKECMDGOALS))
+poetry-add-dev:
+	docker compose exec demo-app poetry add --group dev $(wordlist 2, $(words $(MAKECMDGOALS) - 2), $(MAKECMDGOALS))
 migrate:
 	docker compose exec demo-app poetry run python -m api.migrate_db
 db:

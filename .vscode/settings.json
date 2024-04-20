@@ -1,8 +1,16 @@
 {
     "cSpell.words": [
+        "aiomysql",
         "consts",
+        "dones",
         "fastapi",
+        "isnot",
+        "outerjoin",
         "poerty",
+        "pydantic",
+        "pymysql",
+        "sessionmaker",
+        "sqlalchemy",
         "unmark"
     ],
     "python.analysis.extraPaths": [
