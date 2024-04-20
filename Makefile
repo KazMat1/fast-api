@@ -35,6 +35,8 @@ poetry-add-dev:
 	docker compose exec demo-app poetry add --group dev $(wordlist 2, $(words $(MAKECMDGOALS) - 2), $(MAKECMDGOALS))
 migrate:
 	docker compose exec demo-app poetry run python -m api.migrate_db
+test:
+	docker compose exec demo-app poetry run pytest --asyncio-mode=auto
 db:
 	docker-compose exec db bash
 demo-app:
