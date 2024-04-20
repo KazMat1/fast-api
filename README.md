@@ -27,3 +27,9 @@ docker-compose run --entrypoint "poetry install --no-root" demo-app
 # through a make command
 make poerty-install
 ```
+
+## trouble shooting
+### import error of module path with vscode
+- ref: https://zenn.dev/big_tanukiudon/articles/92804e392145c8
+- ref: https://code.visualstudio.com/docs/python/editing#_importresolvefailure
+- ref: https://code.visualstudio.com/docs/python/environments#_select-and-activate-an-environment
