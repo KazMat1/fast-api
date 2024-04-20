@@ -3,7 +3,6 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from typing import List
 import api.services.task as task_service
 from api.consts.router_const import TASK_PATH, TASK_ID_PATH
-from api.consts.response_const import RESPONSE
 import api.utils.handler as response_handler
 from api.db import get_db
 import api.schemas.task as task_schema
